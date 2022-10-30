@@ -1,0 +1,28 @@
+The definition of done (DoD) :
+A definition of done is when all conditions, or acceptance criteria,
+that a software product must satisfy are met and ready to be accepted by a user, customer, team, or consuming system.
+We must meet the definition of done to ensure quality.
+It lowers rework, by preventing user stories that don’t meet the definition from being promoted to higher level environments. 
+It will prevent features that don’t meet the definition from being delivered to the customer or user.
+DoD Examples:
+
+    1- Unit tests passed
+    2- Code reviewed
+    3- Acceptance criteria met
+    4- Functional tests passed
+    5- Non-Functional requirements met
+    6- Product Owner accepts the User Story
+
+The definition of ready (DoR) :
+A definition of ready (DoR) is used to determine whether work on a task is ready to be started. Before teams assign a task or user story in a sprint, it must be sufficiently well described and understood by team members. 
+The development team should grasp enough of a proposed scope to plan it into a sprint, estimate completion time, and allocate adequate resources to meet its goal. 
+A definition of ready serves as a checklist of criteria to help facilitate a team's decision to begin working on a new task. Note that a definition of ready is different from a definition of done (DoD).
+
+DoR Examples:
+
+    
+    1- The business value is clearly communicated
+    2- The team can demo the feature
+    3- The story has a short summary
+    4- The story can fit into one sprint
+    5- There are no external dependencies
