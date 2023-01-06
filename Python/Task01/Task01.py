@@ -20,7 +20,6 @@ def string_mutation(str,pos,char):
 
 
 
-
 if __name__ == '__main__':
     print("Please enter the string")
     s = input()
