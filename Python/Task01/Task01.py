@@ -4,16 +4,22 @@
 2- joining the new character in the new string in the same function.
 3- then returning the new string with the new character.
 '''
+
 def string_mutation(str,pos,char):
     l = list(str)
     l[pos] = char;
     str=''.join(l);
     return str
+
+
 '''
 1- receiving inputs from the user to set it in the function to retrieving the new string.
 2- calling the function and set it in new string to return it.
 3- printing the new string.
 '''
+
+
+
 
 if __name__ == '__main__':
     print("Please enter the string")
@@ -26,9 +32,7 @@ if __name__ == '__main__':
     print(new_s)
 
 
-
-
-
+    
     '''
 1- Sample input is "abracadabra","5" "k" ,
 sample output is "abrackdabra"
