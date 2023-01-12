@@ -1,14 +1,14 @@
-opened_Brackets = ["[","{","("]
-closed_Brackets = ["]","}",")"]
+Opened_Brackets = ["[","{","("]
+Closed_Brackets = ["]","}",")"]
 
 def Check_Balanced_Brackets(Str):
     stack = []
     for i in Str:
-        if i in opened_Brackets:
+        if i in Opened_Brackets:
             stack.append(i)
-        elif i in closed_Brackets:
-                 pos = closed_Brackets.index(i)
-                 if ((len(stack) > 0) and (opened_Brackets[pos] == stack[len(stack)-1])):
+        elif i in Closed_Brackets:
+                 pos = Closed_Brackets.index(i)
+                 if ((len(stack) > 0) and (Opened_Brackets[pos] == stack[len(stack)-1])):
                      stack.pop()
                  else:
                      return "NO"
