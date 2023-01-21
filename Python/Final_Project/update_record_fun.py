@@ -39,7 +39,7 @@ def update_record():
                         choice=input()
 
                         while not (choice == '1' or choice == '2' or choice == '3' or choice == '4' or choice == '5'):
-                              print("You entered invalid name")
+                              print("You entered invalid choice")
                               print("Please enter Which data do you want to change it? 1 or 2 or 3 or 4 or 5")
                               choice = input()
                         else:
