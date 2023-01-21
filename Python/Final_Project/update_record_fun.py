@@ -35,7 +35,7 @@ def update_record():
 # Receiving the data which the user wants to update
                     else:
                         print("Which data do you want to change it? \n" )
-                        print(" 1) Username \n 2) Email_Address \n 3) Phone_Nmber \n 4) Address \n 5)All_Record ")
+                        print(" 1) Username \n 2) Email_Address \n 3) Phone_Nmber \n 4) Address \n 5) All_Record ")
                         choice=input()
 
                         while not (choice == '1' or choice == '2' or choice == '3' or choice == '4' or choice == '5'):
