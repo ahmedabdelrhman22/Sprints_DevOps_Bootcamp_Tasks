@@ -27,7 +27,6 @@ def update_record():
             for index, row in uf.iterrows():
                 if row['Username'] == username:
                     row_number = index
-                    print(row_number)
                     while(row_number == ''):
                          print("Error ! You entered invalid name")
                          print("Please enter the username you want to update his data")
@@ -67,15 +66,17 @@ def update_record():
                                        uf.to_csv(filename, index=False)
                                        print("Email_Address updated successfully")
                             elif(choice == '3'):
-                                   print("please, Enter the new phone number ")
-                                   Phone_Nmber = input()
+                                   print("Please enter your phone numbers with space between each number : ")
+                                   Phone_Number = input()
+                                   user_list = Phone_Number.split()
                                    pattern = "^(00201|\+201|01)[0-2,5]{1}[0-9]{8}"
                                    while not re.match(pattern, Phone_Number):
                                        print("Error !")
-                                       print("Please enter valid phone number : ")
+                                       print("Please enter valid phone numbers with space between each number : ")
                                        Phone_Number = input()
+                                       user_list = Phone_Number.split()
                                    else:
-                                       uf.iloc[row_number, 2] = Phone_Nmber
+                                       uf.iloc[row_number, 2] = user_list
                                        uf.to_csv(filename, index=False)
                                        print("Phone_Number updated successfully")
                             elif(choice == '4'):
@@ -106,19 +107,22 @@ def update_record():
                                           uf.iloc[row_number, 1] = Email_Address
                                           uf.to_csv(filename, index=False)
                                           print("Email_Address updated successfully \n")
-                                          print("please, Enter the new phone number ")
-                                          Phone_Nmber = input()
+                                          print("Please enter your phone numbers with space between each number : ")
+                                          Phone_Number = input()
+                                          user_list = Phone_Number.split()
                                           pattern = "^(00201|\+201|01)[0-2,5]{1}[0-9]{8}"
                                           while not re.match(pattern, Phone_Number):
                                              print("Error !")
-                                             print("Please enter valid phone number : ")
+                                             print("Please enter valid phone numbers with space between each number : ")
                                              Phone_Number = input()
+                                             user_list = Phone_Number.split()
                                           else:
-                                              uf.iloc[row_number, 2] = Phone_Nmber
+                                              uf.iloc[row_number, 2] = user_list
                                               uf.to_csv(filename, index=False)
                                               print("Phone_Number updated successfully")
                                               print("please, Enter the new address ")
                                               Address = input()
                                               uf.iloc[row_number, 3] = Address
                                               uf.to_csv(filename, index=False)
-                                              print("Address updated successfully")
+                                              print("Address updated successfully \n")
+                                              print("Record updated successfully !")
