@@ -1,0 +1,36 @@
+@Library('jenkins-shared-library') _
+import com.mycorp.pipeline.somelib.Helper
+
+pipeline {
+     agent any
+    parameters {
+        booleanParam(name:'project', defaultValue: true, description:'')
+        choice(name: 'build', choices:['stage01','stage02','stage03'], description: '' ) 
+    }
+
+    stages {
+        stage('dev') {
+            steps {
+                dev(build)
+            }
+        }
+
+        stage('test') {
+            when {
+                expression{
+                    params.project == true 
+                }
+            }
+            steps {
+                test()
+            }
+        }
+        
+        stage('deploy') {  
+            steps {
+                deploy()
+            }
+        }    
+    }
+
+}
